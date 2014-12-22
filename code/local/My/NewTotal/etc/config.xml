@@ -1,0 +1,84 @@
+<config>
+    <modules>
+        <My_NewTotal>
+            <version>0.0.2</version>
+        </My_NewTotal>
+    </modules>
+    <global>
+
+        <sales>
+            <quote>
+                <totals>
+                    <service>
+                        <class>my_newtotal/quote_address_total_service</class>
+                        <after>subtotal</after>
+                        <before>tax</before>
+                    </service>
+                </totals>
+            </quote>
+           <order_invoice>
+                <totals>
+                    <service>
+                        <class>my_newtotal/order_invoice_total_service</class>
+                        <after>subtotal</after>
+                        <before>tax</before>
+                    </service>
+                </totals>
+            </order_invoice>
+            <order_creditmemo>
+                <totals>
+                    <service>
+                        <class>my_newtotal/order_creditmemo_total_service</class>
+                        <after>subtotal</after>
+                        <before>tax</before>
+                    </service>
+                </totals>
+            </order_creditmemo>
+        </sales>
+
+        <models>
+            <my_newtotal>
+                <class>My_NewTotal_Model</class>
+            </my_newtotal>
+            <sales>
+                <rewrite>
+                    <quote>My_NewTotal_Model_Quote</quote>
+                </rewrite>
+            </sales>
+        </models>
+
+        <blocks>
+            <adminhtml>
+                <rewrite>
+                    <sales_order_totals>My_NewTotal_Block_Adminhtml_Order_Totals</sales_order_totals>
+                    <sales_order_invoice_totals>My_NewTotal_Block_Adminhtml_Order_Invoice_Totals</sales_order_invoice_totals>
+                    <sales_order_creditmemo_totals>My_NewTotal_Block_Adminhtml_Order_Creditmemo_Totals</sales_order_creditmemo_totals>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+
+        <resources>
+            <my_newtotal_setup>
+                <setup>
+                    <module>My_NewTotal</module>
+                </setup>
+            </my_newtotal_setup>
+        </resources>
+
+        <fieldsets>
+            <sales_convert_quote>
+                <service_total>
+                    <to_order>*</to_order>
+                </service_total>
+            </sales_convert_quote>
+        </fieldsets>
+
+    </global>
+    <default>
+        <sales>
+            <totals_sort>
+                <service>15</service>
+            </totals_sort>
+        </sales>
+    </default>
+</config>

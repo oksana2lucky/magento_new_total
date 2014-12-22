@@ -1,0 +1,4 @@
+This module supply to calculate new type of totals: cost of wrapping for product.
+The idea is based on add new product with sku 'wrapping' to cart.
+Its row total is equal to wrapping product price * quantity of products in the cart.
+The Label of this total is 'Service TTC'

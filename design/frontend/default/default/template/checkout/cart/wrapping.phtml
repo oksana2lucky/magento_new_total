@@ -1,0 +1,10 @@
+<?php
+$quote = Mage::getSingleton('checkout/session')->getQuote();
+?>
+<?php if ($quote->hasWrapping()) : ?>
+    <p><b>Wrapping</b></p>
+<?php else : ?>
+    <form action="<?php echo $this->getUrl('checkout/cart/wrapping') ?>" method="post">
+        <button type="submit" name="add_wrapping_cart_action" value="wrapping_cart" title="<?php echo $this->__('Add Wrapping'); ?>" class="button btn-empty" id="wrapping_cart_button"><span><span><?php echo $this->__('Add Wrapping'); ?></span></span></button>
+    </form>
+<?php endif; ?>
