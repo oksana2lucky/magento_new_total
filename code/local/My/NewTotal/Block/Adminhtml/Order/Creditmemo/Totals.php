@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Class My_NewTotal_Block_Adminhtml_Order_Creditmemo_Totals
+ */
 class My_NewTotal_Block_Adminhtml_Order_Creditmemo_Totals extends Mage_Adminhtml_Block_Sales_Order_Creditmemo_Totals
 {
     /**

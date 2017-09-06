@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Class My_NewTotal_Block_Adminhtml_Order_Totals
+ */
 class My_NewTotal_Block_Adminhtml_Order_Totals extends Mage_Adminhtml_Block_Sales_Order_Totals
 {
     /**
@@ -19,7 +23,6 @@ class My_NewTotal_Block_Adminhtml_Order_Totals extends Mage_Adminhtml_Block_Sale
                 'label'     => $this->helper('core')->__('Service TTC'),
             ), array('shipping', 'tax')));
         }
-
         return $this;
     }
 

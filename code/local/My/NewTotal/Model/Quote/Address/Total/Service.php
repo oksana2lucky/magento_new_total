@@ -1,6 +1,13 @@
 <?php
+
+/**
+ * Class My_NewTotal_Model_Quote_Address_Total_Service
+ */
 class My_NewTotal_Model_Quote_Address_Total_Service extends Mage_Sales_Model_Quote_Address_Total_Abstract
 {
+    /**
+     * My_NewTotal_Model_Quote_Address_Total_Service constructor.
+     */
     public function __construct()
     {
         $this->setCode('service');
@@ -19,7 +26,8 @@ class My_NewTotal_Model_Quote_Address_Total_Service extends Mage_Sales_Model_Quo
     /**
      * Collect totals information about insurance
      *
-     * @param   Mage_Sales_Model_Quote_Address $address
+     * @param Mage_Sales_Model_Quote_Address $address
+     * @return $this
      */
     public function collect(Mage_Sales_Model_Quote_Address $address)
     {
@@ -52,6 +60,7 @@ class My_NewTotal_Model_Quote_Address_Total_Service extends Mage_Sales_Model_Quo
      * Add giftcard totals information to address object
      *
      * @param   Mage_Sales_Model_Quote_Address $address
+     * @return $this
      */
     public function fetch(Mage_Sales_Model_Quote_Address $address)
     {

@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Class My_NewTotal_Model_Quote
+ */
 class My_NewTotal_Model_Quote extends Mage_Sales_Model_Quote
 {
     /**
@@ -20,6 +24,11 @@ class My_NewTotal_Model_Quote extends Mage_Sales_Model_Quote
         return $items;
     }
 
+    /**
+     * Check if product sku has wrapping
+     *
+     * @return bool
+     */
     public function hasWrapping() {
         $hasWrapping = false;
         foreach ($this->getAllItems() as $item) {
@@ -31,6 +40,11 @@ class My_NewTotal_Model_Quote extends Mage_Sales_Model_Quote
         return $hasWrapping;
     }
 
+    /**
+     * Collect quote totals
+     *
+     * @return $this
+     */
     public function collectTotals()
     {
         /**

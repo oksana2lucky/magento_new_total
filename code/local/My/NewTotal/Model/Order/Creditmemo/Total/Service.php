@@ -1,6 +1,16 @@
 <?php
+
+/**
+ * Class My_NewTotal_Model_Order_Creditmemo_Total_Service
+ */
 class My_NewTotal_Model_Order_Creditmemo_Total_Service extends Mage_Sales_Model_Order_Creditmemo_Total_Abstract
 {
+    /**
+     * Collect credit memo totals
+     *
+     * @param Mage_Sales_Model_Order_Creditmemo $creditmemo
+     * @return $this
+     */
     public function collect(Mage_Sales_Model_Order_Creditmemo $creditmemo)
     {
         $totalService = $creditmemo->getOrder()->getServiceTotal() != null ? $creditmemo->getOrder()->getServiceTotal() : 0;
